@@ -1,0 +1,1 @@
+from fortnox_methods import post_invoice

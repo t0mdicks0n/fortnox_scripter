@@ -1,0 +1,1 @@
+from create_invoices import main as create_invoices

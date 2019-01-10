@@ -1,0 +1,9 @@
+# Python stuff
+*.pyc
+
+# Mac OS Crap
+*.DS_Store
+
+# Config files
+application/config/*
+!application/config/example_*
