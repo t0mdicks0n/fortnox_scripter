@@ -1,1 +1,2 @@
 from fortnox_methods import post_invoice
+from fortnox_methods import delete_invoice
