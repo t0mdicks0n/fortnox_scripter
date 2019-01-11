@@ -1,4 +1,4 @@
-## Scripting Program on Fortnox API
+# Scripting Program on Fortnox API
 ```
 
 	 ___            _                   ___            _        _      
@@ -10,8 +10,8 @@
 
 ```
 To automate administration.
-### How to run
-#### Commands
+## How to run
+### Commands
 By running `python application/main.py -h` you get the help text that of all flags that at the time of writing this readme looked like this:
 
 ```
@@ -42,7 +42,7 @@ optional arguments:
 
 ```
 
-#### Creating Invoices in Fortnox from a file
+### Creating Invoices in Fortnox from a file
 The use case for this is to create invoices from a input file. The program expect the input CSV file to have the following format:
 ```csv
 CustomerNumber,ArticleNumber,DeliveredQuantity
@@ -77,14 +77,14 @@ Created invoices with the following Fortnox ID's:
 ```
 We can then use this list of ID's to delete ("makulera") invoices in Fortnox.
 
-#### Deleting ("makulera") invoices in Fortnox
+### Deleting ("makulera") invoices in Fortnox
 For development we want to delete ("makulera") invoices. We can do this by passing in specific Fortnox invoice id's that we want to delete like this:
 
 ```bash
 python application/main.py \
 	-di "37,38,39"
 ```
-### How to create Fortnox API Keys
+## How to create Fortnox API Keys
 
 1. Create a developer account with Fortnox [here](https://developer.fortnox.se/). A human will get in touch and supply the fields needed to authenticate. After this you yourself as a developer account will have a Fortnox instance. This can then be used as a Sandbox environment for testing this program.
 2. After that you can make the one time request described here: [here](https://developer.fortnox.se/getting-started/).
@@ -96,3 +96,9 @@ python application/main.py \
 }
 ```
 4. Then what you probably want to do is to use this developer account (or "integration" as Fortnox calls it) to interact with your companies Fortnox-account. What you then need to do is to go to the user management page inside the target Fortnox accounts web UI. You can then click `+ Lägg till integration` and search for your specific integration by inputting your developer accounts `Client-Secret`. After this you will get an email with a authentication code similar to when you created your developer account. Just as before you can then request the specific Access-Token for this new integration. Finally input this in the file `application/config/fortnox_key.json` in the same format as the sandbox key.
+
+## Future improvements
+
+1. Add API functionality to for example post a invoice receiver triggered by a network request.
+2. Implement Docker.
+3. Add support for creating customers in Fortnox.
