@@ -79,6 +79,7 @@ For development we want to delete ("makulera") invoices. We can do this by passi
 
 ```bash
 python application/main.py \
+	-sb \
 	-di "37,38,39"
 ```
 ## How to create Fortnox API Keys
