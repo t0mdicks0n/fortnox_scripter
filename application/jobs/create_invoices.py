@@ -33,6 +33,7 @@ def format_invoices(raw_invoice_data) :
 def iterate_over_invoices(invoices, fortnox_key, order_number_reference) :
 	fortnox_invoice_id = []
 	for CustomerNumber in invoices :
+		print "Posting invoice for CustomerNumber: " + str(CustomerNumber)
 		# Post a invoice to Fortnox API and get the id Fortnox returns
 		fortnox_id = post_invoice(
 			CustomerNumber,
