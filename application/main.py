@@ -2,6 +2,7 @@
 import argparse
 from jobs import create_invoices
 from jobs import delete_invoices
+from jobs import get_invoices
 
 if __name__ == '__main__' :
 	parser = argparse.ArgumentParser(
@@ -52,6 +53,13 @@ if __name__ == '__main__' :
 						ID's and delete them. Do it in this format:
 						"2,3,4" """
 	)
+	parser.add_argument(
+		'-gi',
+		'--get_invoices',
+		action='store_true',
+		help="""Get all outstanding invoices in Fortnox. Useful for removing a
+		bunch you created by mistake."""
+	)
 	args = parser.parse_args()
 	if args.create_invoices :
 		if args.path is None :
@@ -61,3 +69,5 @@ if __name__ == '__main__' :
 	if args.delete_invocies :
 		args_as_list = [int(item) for item in args.delete_invocies.split(',')]
 		delete_invoices(args_as_list, args.sandbox)
+	if args.get_invoices :
+		get_invoices(args.sandbox)

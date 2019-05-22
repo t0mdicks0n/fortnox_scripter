@@ -1,2 +1,3 @@
 from fortnox_methods import post_invoice
 from fortnox_methods import delete_invoice
+from fortnox_methods import get_all_invoices

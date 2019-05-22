@@ -95,6 +95,11 @@ python application/main.py \
 ```
 4. Then what you probably want to do is to use this developer account (or "integration" as Fortnox calls it) to interact with your companies Fortnox-account. What you then need to do is to go to the user management page inside the target Fortnox accounts web UI. You can then click `+ Lägg till integration` and search for your specific integration by inputting your developer accounts `Client-Secret`. After this you will get an email with a authentication code similar to when you created your developer account. Just as before you can then request the specific Access-Token for this new integration. Finally input this in the file `application/config/fortnox_key.json` in the same format as the sandbox key.
 
+## Resources
+The general documentation of the API can be found [here](https://developer.fortnox.se/documentation/resources/invoices/) at the time of writing.
+
+A explaination of parameters in the resources can be found [here](https://developer.fortnox.se/documentation/general/parameters/).
+
 ## Future improvements
 
 1. Add API functionality to for example post a invoice receiver triggered by a network request.
